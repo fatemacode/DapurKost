@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__DIR__) . '/core/Database.php';
+
 header('Content-Type: application/json; charset=utf-8');
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
@@ -16,13 +18,35 @@ if ($method === 'OPTIONS') {
     exit;
 }
 
-$response = [
-    'success' => true,
-    'message' => 'Backend entry point is ready',
-    'method' => $method,
-    'uri' => $uri,
-    'body' => $decodedBody,
-];
+try {
+    $database = Database::getConnection();
 
-http_response_code(200);
+    $response = [
+        'success' => true,
+        'message' => 'Backend entry point is ready',
+        'method' => $method,
+        'uri' => $uri,
+        'body' => $decodedBody,
+        'database' => [
+            'connected' => true,
+        ],
+    ];
+
+    http_response_code(200);
+} catch (Throwable $e) {
+    $response = [
+        'success' => false,
+        'message' => 'Database connection failed',
+        'method' => $method,
+        'uri' => $uri,
+        'body' => $decodedBody,
+        'database' => [
+            'connected' => false,
+            'error' => $e->getMessage(),
+        ],
+    ];
+
+    http_response_code(500);
+}
+
 echo json_encode($response, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
