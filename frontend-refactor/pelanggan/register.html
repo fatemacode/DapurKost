@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Akun - DapurKost</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/register.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="login-wrapper">
+
+  <!-- ============================================================
+       KIRI - ILUSTRASI
+  ============================================================ -->
+  <div class="login-illustration">
+    <a href="home.html" class="illustration-brand">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+
+    <div class="illustration-content">
+      <div class="illustration-img-circle">
+        <img src="assets/images/register-illustration.png" alt="Ilustrasi Makanan DapurKost">
+        <div class="illustration-food-icon icon-pos-1"><i class="bi bi-basket2"></i></div>
+        <div class="illustration-food-icon icon-pos-2"><i class="bi bi-cup-straw"></i></div>
+        <div class="illustration-food-icon icon-pos-3"><i class="bi bi-heart"></i></div>
+      </div>
+      <h2 class="illustration-title">Gabung Bersama Ribuan Mahasiswa</h2>
+      <p class="illustration-desc">
+        Buat akun sekarang dan mulai nikmati kemudahan langganan catering harian yang diantar langsung ke kostmu.
+      </p>
+      <div class="illustration-dots">
+        <span></span>
+        <span class="active"></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       KANAN - FORM REGISTER
+  ============================================================ -->
+  <div class="login-form-panel">
+    <div class="login-form-box">
+      <a href="home.html" class="login-form-back"><i class="bi bi-arrow-left"></i> Kembali ke Beranda</a>
+
+      <h1 class="login-form-title">Buat Akun Baru</h1>
+      <p class="login-form-subtitle">Daftar sekarang dan mulai berlangganan catering favoritmu.</p>
+
+      <form id="registerForm" novalidate>
+
+        <div class="form-group-dk">
+          <label class="form-label-dk" for="namaInput">Nama Lengkap</label>
+          <div class="input-icon-wrap">
+            <i class="bi bi-person input-icon-left"></i>
+            <input type="text" id="namaInput" class="form-control-dk" placeholder="Masukkan nama lengkap" autocomplete="name">
+          </div>
+          <div class="error-message" id="namaError"><i class="bi bi-exclamation-circle"></i> <span>Nama minimal 3 karakter.</span></div>
+        </div>
+
+        <div class="form-row-double">
+          <div class="form-group-dk">
+            <label class="form-label-dk" for="emailInput">Email</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-envelope input-icon-left"></i>
+              <input type="email" id="emailInput" class="form-control-dk" placeholder="nama@email.com" autocomplete="email">
+            </div>
+            <div class="error-message" id="emailError"><i class="bi bi-exclamation-circle"></i> <span>Email tidak valid.</span></div>
+          </div>
+
+          <div class="form-group-dk">
+            <label class="form-label-dk" for="hpInput">No. HP</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-phone input-icon-left"></i>
+              <input type="tel" id="hpInput" class="form-control-dk" placeholder="08xxxxxxxxxx" autocomplete="tel">
+            </div>
+            <div class="error-message" id="hpError"><i class="bi bi-exclamation-circle"></i> <span>No. HP minimal 10 digit angka.</span></div>
+          </div>
+        </div>
+
+        <div class="form-group-dk">
+          <label class="form-label-dk" for="passwordInput">Password</label>
+          <div class="input-icon-wrap">
+            <i class="bi bi-lock input-icon-left"></i>
+            <input type="password" id="passwordInput" class="form-control-dk" placeholder="Buat password" style="padding-right:48px;">
+            <button type="button" class="toggle-password" id="togglePassword1"><i class="bi bi-eye"></i></button>
+          </div>
+          <div class="error-message" id="passwordError"><i class="bi bi-exclamation-circle"></i> <span>Password minimal 8 karakter.</span></div>
+          <div class="password-strength-wrap" id="strengthWrap" style="display:none;">
+            <div class="password-strength-bar">
+              <div class="strength-segment" id="segment1"></div>
+              <div class="strength-segment" id="segment2"></div>
+              <div class="strength-segment" id="segment3"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel"></span>
+          </div>
+        </div>
+
+        <div class="form-group-dk">
+          <label class="form-label-dk" for="confirmPasswordInput">Konfirmasi Password</label>
+          <div class="input-icon-wrap">
+            <i class="bi bi-lock-fill input-icon-left"></i>
+            <input type="password" id="confirmPasswordInput" class="form-control-dk" placeholder="Ulangi password" style="padding-right:48px;">
+            <button type="button" class="toggle-password" id="togglePassword2"><i class="bi bi-eye"></i></button>
+          </div>
+          <div class="error-message" id="confirmPasswordError"><i class="bi bi-exclamation-circle"></i> <span>Konfirmasi password tidak cocok.</span></div>
+        </div>
+
+        <div class="form-group-dk">
+          <label class="form-label-dk" for="alamatInput">Alamat Kost</label>
+          <div class="input-icon-wrap">
+            <i class="bi bi-geo-alt input-icon-left"></i>
+            <textarea id="alamatInput" class="form-control-dk" placeholder="Nama kost, jalan, nomor, dan patokan lokasi"></textarea>
+          </div>
+          <div class="error-message" id="alamatError"><i class="bi bi-exclamation-circle"></i> <span>Alamat kost minimal 10 karakter.</span></div>
+        </div>
+
+        <div class="terms-wrap">
+          <input type="checkbox" id="termsCheckbox">
+          <label for="termsCheckbox">Saya menyetujui <a href="#">Syarat &amp; Ketentuan</a> serta <a href="#">Kebijakan Privasi</a> DapurKost.</label>
+        </div>
+        <div class="error-message" id="termsError" style="margin-top:-16px; margin-bottom:16px;"><i class="bi bi-exclamation-circle"></i> <span>Kamu harus menyetujui syarat &amp; ketentuan.</span></div>
+
+        <button type="submit" class="btn-login-dk btn-ripple" id="registerBtn">
+          <span class="spinner-dk" id="registerSpinner"></span>
+          <span id="registerBtnText">Daftar Sekarang</span>
+        </button>
+
+        <div class="register-link-wrap">
+          Sudah punya akun? <a href="login.html">Login di sini</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast-dk" id="toastDK">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="toastMessage">Registrasi berhasil</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/register.js"></script>
+
+</body>
+</html>

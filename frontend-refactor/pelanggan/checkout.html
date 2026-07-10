@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - DapurKost</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dapurkost" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-dk" href="home.html">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list" style="font-size:1.8rem; color: var(--merah);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
+        <li class="nav-item"><a class="nav-link" href="cara-order.html">Cara Order</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-navbar-order btn-ripple">Akun Saya</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CHECKOUT HEADER -->
+<div class="checkout-header">
+  <div class="container">
+    <h1 class="checkout-title">Checkout Pesanan</h1>
+    <p class="checkout-subtitle">Lengkapi data pengiriman untuk menyelesaikan langganan cateringmu.</p>
+    <div class="checkout-steps">
+      <div class="checkout-step active"><span class="step-num">1</span> Keranjang</div>
+      <div class="checkout-step active"><span class="step-num">2</span> Checkout</div>
+      <div class="checkout-step"><span class="step-num">3</span> Pembayaran</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CHECKOUT -->
+<div class="checkout-main">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- ================= KIRI ================= -->
+      <div class="col-lg-7">
+
+        <!-- ALAMAT PENGIRIMAN -->
+        <div class="checkout-card">
+          <div class="checkout-card-title"><i class="bi bi-geo-alt"></i> Alamat Pengiriman</div>
+
+          <div class="saved-address-chip" id="savedAddressChip">
+            <i class="bi bi-bookmark-check"></i> Gunakan alamat kost tersimpan
+          </div>
+
+          <div class="form-group-dk">
+            <label class="form-label-dk" for="alamatInput">Alamat Lengkap</label>
+            <textarea id="alamatInput" class="form-control-dk" placeholder="Nama kost, jalan, nomor, dan patokan lokasi"></textarea>
+            <div class="error-message" id="alamatError"><i class="bi bi-exclamation-circle"></i> <span>Alamat pengiriman wajib diisi (minimal 10 karakter).</span></div>
+          </div>
+        </div>
+
+        <!-- TANGGAL MULAI & CATATAN -->
+        <div class="checkout-card">
+          <div class="checkout-card-title"><i class="bi bi-calendar-check"></i> Jadwal &amp; Catatan</div>
+
+          <div class="form-group-dk">
+            <label class="form-label-dk" for="tanggalInput">Tanggal Mulai Pengiriman</label>
+            <input type="date" id="tanggalInput" class="form-control-dk">
+            <div class="error-message" id="tanggalError"><i class="bi bi-exclamation-circle"></i> <span>Pilih tanggal mulai pengiriman.</span></div>
+          </div>
+
+          <div class="form-group-dk mb-0">
+            <label class="form-label-dk" for="catatanInput">Catatan Tambahan (Opsional)</label>
+            <textarea id="catatanInput" class="form-control-dk" placeholder="Contoh: tidak pakai cabai, taruh di depan pagar kost, dll."></textarea>
+          </div>
+        </div>
+
+        <!-- RINGKASAN MENU -->
+        <div class="checkout-card">
+          <div class="checkout-card-title"><i class="bi bi-basket"></i> Ringkasan Menu</div>
+          <div id="orderItemsList"></div>
+        </div>
+
+      </div>
+
+      <!-- ================= KANAN ================= -->
+      <div class="col-lg-5">
+        <div class="summary-card">
+          <div class="summary-title"><i class="bi bi-receipt me-2"></i>Ringkasan Pembayaran</div>
+
+          <div class="summary-row">
+            <span class="label">Subtotal</span>
+            <span class="value" id="subtotalValue">Rp0</span>
+          </div>
+          <div class="summary-row">
+            <span class="label">Ongkos Kirim</span>
+            <span class="value" id="ongkirValue">Rp0</span>
+          </div>
+          <div class="summary-row discount" id="discountRow" style="display:none;">
+            <span class="label">Diskon Voucher</span>
+            <span class="value" id="discountValue">-Rp0</span>
+          </div>
+
+          <div class="voucher-wrap">
+            <label class="form-label-dk" style="color: var(--cream);">Kode Voucher</label>
+            <div class="voucher-input-group">
+              <input type="text" id="voucherInput" class="voucher-input" placeholder="Contoh: HEMAT10">
+              <button type="button" class="btn-voucher btn-ripple" id="applyVoucherBtn">Pakai</button>
+            </div>
+            <div class="voucher-message" id="voucherMessage"><i class="bi bi-info-circle"></i> <span id="voucherMessageText"></span></div>
+          </div>
+
+          <div class="summary-total-row">
+            <span class="summary-total-label">Total Bayar</span>
+            <span class="summary-total-value" id="totalValue">Rp0</span>
+          </div>
+
+          <button type="button" class="btn-checkout-final btn-ripple" id="checkoutBtn">
+            <span class="spinner-dk" id="checkoutSpinner"></span>
+            <span id="checkoutBtnText"><i class="bi bi-lock-fill me-1"></i> Lanjut Pembayaran</span>
+          </button>
+
+          <div class="summary-secure-note"><i class="bi bi-shield-check"></i> Pembayaran aman &amp; terenkripsi</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-dk">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+          <span>DapurKost</span>
+        </div>
+        <p class="footer-desc">Solusi makan harian untuk mahasiswa dan anak kost. Rasa rumahan, harga bersahabat, antar tepat waktu.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="cara-order.html">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="paket.html">Paket Harian</a></li>
+          <li><a href="paket.html">Paket Mingguan</a></li>
+          <li><a href="paket.html">Paket Bulanan</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Kontak</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Jl. Sekeloa Dalam No. 12, Bandung</span></div>
+        <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>0812-3456-7890</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>halo@dapurkost.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 DapurKost. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<div class="toast-dk" id="toastDK">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="toastMessage">Berhasil</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/checkout.js"></script>
+
+</body>
+</html>

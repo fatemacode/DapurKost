@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Menu - DapurKost</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/jadwal-menu.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dapurkost" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-dk" href="home.html">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list" style="font-size:1.8rem; color: var(--merah);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
+        <li class="nav-item"><a class="nav-link" href="cara-order.html">Cara Order</a></li>
+      </ul>
+      <a href="paket.html" class="btn btn-navbar-order btn-ripple">Lihat Paket</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="jadwal-header">
+  <div class="container">
+    <span class="section-eyebrow" style="color:var(--merah); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.85rem;">Rencana Makan Mingguan</span>
+    <h1 class="jadwal-title">Jadwal Menu Paket</h1>
+    <p class="jadwal-subtitle">Lihat menu Pagi, Siang, dan Malam untuk setiap hari. Menu dirotasi otomatis tiap minggu supaya kamu nggak bosan makan itu-itu saja.</p>
+    <div class="paket-type-badge" id="paketTypeBadge"><i class="bi bi-calendar-week"></i> <span id="paketTypeLabel">Paket Mingguan</span></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="jadwal-main">
+  <div class="container">
+
+    <!-- TOGGLE JENIS PAKET -->
+    <div class="paket-switch-wrap">
+      <button class="paket-switch-btn active" data-paket="mingguan"><i class="bi bi-calendar-week me-1"></i> Paket Mingguan</button>
+      <button class="paket-switch-btn" data-paket="bulanan"><i class="bi bi-calendar-month me-1"></i> Paket Bulanan</button>
+    </div>
+
+    <!-- WEEK NAVIGATOR (MINGGUAN) -->
+    <div class="week-navigator" id="weekNavigator">
+      <button class="week-nav-btn" id="prevWeekBtn"><i class="bi bi-chevron-left"></i></button>
+      <div class="week-range-label">
+        <div class="week-range-title" id="weekRangeTitle">Minggu Ini</div>
+        <div class="week-range-sub" id="weekRangeSub">8 - 14 Juli 2026</div>
+      </div>
+      <button class="week-nav-btn" id="nextWeekBtn"><i class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <!-- TABS BULAN (BULANAN) -->
+    <div class="month-tabs-wrap" id="monthTabsWrap" style="display:none;">
+      <button class="month-tab-btn active" data-week="0">Minggu 1</button>
+      <button class="month-tab-btn" data-week="1">Minggu 2</button>
+      <button class="month-tab-btn" data-week="2">Minggu 3</button>
+      <button class="month-tab-btn" data-week="3">Minggu 4</button>
+    </div>
+
+    <!-- LEGEND -->
+    <div class="legend-wrap">
+      <div class="legend-item"><div class="legend-icon pagi"><i class="bi bi-sunrise"></i></div> Sarapan Pagi</div>
+      <div class="legend-item"><div class="legend-icon siang"><i class="bi bi-sun"></i></div> Makan Siang</div>
+      <div class="legend-item"><div class="legend-icon malam"><i class="bi bi-moon-stars"></i></div> Makan Malam</div>
+    </div>
+
+    <!-- JADWAL GRID -->
+    <div class="jadwal-scroll-wrap">
+      <div class="jadwal-grid" id="jadwalGrid"></div>
+    </div>
+
+    <!-- INFO ROTASI -->
+    <div class="rotation-info">
+      <i class="bi bi-info-circle"></i>
+      <span>Menu di atas dirotasi otomatis setiap minggu — susunan menunya sama, tapi penempatan harinya bergeser supaya kamu tetap merasakan variasi menu meskipun berlangganan dalam waktu lama.</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-jadwal">
+      <h3 class="cta-jadwal-title">Sudah Cocok dengan Jadwalnya?</h3>
+      <p class="cta-jadwal-desc">Langsung pilih paket dan mulai berlangganan makan enak setiap hari.</p>
+      <a href="paket.html" class="btn-cta-jadwal btn-ripple"><i class="bi bi-bag-check me-2"></i>Pilih Paket Ini</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-dk">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+          <span>DapurKost</span>
+        </div>
+        <p class="footer-desc">Solusi makan harian untuk mahasiswa dan anak kost. Rasa rumahan, harga bersahabat, antar tepat waktu.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="cara-order.html">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="paket.html">Paket Harian</a></li>
+          <li><a href="jadwal-menu.html?paket=mingguan">Paket Mingguan</a></li>
+          <li><a href="jadwal-menu.html?paket=bulanan">Paket Bulanan</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Kontak</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Jl. Sekeloa Dalam No. 12, Bandung</span></div>
+        <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>0812-3456-7890</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>halo@dapurkost.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 DapurKost. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<div class="toast-dk" id="toastDK">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="toastMessage">Berhasil</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/jadwal-menu.js"></script>
+
+</body>
+</html>

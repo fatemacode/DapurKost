@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DapurKost - Rasa Rumahan, Sampai ke Pintu Kostmu</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Google Fonts - Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING SCREEN
+============================================================ -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar navbar-expand-lg navbar-dapurkost" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-dk" href="home.html">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list" style="font-size:1.8rem; color: var(--merah);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
+        <li class="nav-item"><a class="nav-link" href="cara-order.html">Cara Order</a></li>
+      </ul>
+      <a href="#pesan" class="btn btn-navbar-order btn-ripple">Pesan Sekarang</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 reveal" id="heroText">
+        <span class="hero-badge"><i class="bi bi-stars"></i> Catering Favorit Anak Kost</span>
+        <h1 class="hero-title">Rasa Rumahan,<br><span class="highlight">Sampai ke Pintu Kostmu</span></h1>
+        <p class="hero-desc">
+          Capek mikirin menu makan tiap hari? DapurKost siap mengantarkan makanan rumahan yang sehat,
+          hangat, dan pas di kantong mahasiswa. Tinggal pesan, kami yang antar sampai depan kost kamu.
+        </p>
+        <div class="hero-btn-group">
+          <a href="#paket" class="btn btn-primary-dk btn-ripple"><i class="bi bi-bag-check me-2"></i>Mulai Berlangganan</a>
+          <a href="menu.html" class="btn btn-outline-dk btn-ripple"><i class="bi bi-book me-2"></i>Lihat Menu</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number"><span class="counter" data-target="1200">0</span>+</div>
+            <div class="hero-stat-label">Mahasiswa Berlangganan</div>
+          </div>
+          <div>
+            <div class="hero-stat-number"><span class="counter" data-target="35">0</span>+</div>
+            <div class="hero-stat-label">Menu Pilihan</div>
+          </div>
+          <div>
+            <div class="hero-stat-number"><span class="counter" data-target="15">0</span></div>
+            <div class="hero-stat-label">Area Kost Terjangkau</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-delay-2" id="heroImage">
+        <div class="hero-image-wrap">
+          <img src="assets/images/hero-food.png" alt="Makanan DapurKost" class="hero-image-main">
+          <div class="hero-float-card hero-float-card-1">
+            <div class="hero-float-icon"><i class="bi bi-truck"></i></div>
+            <div>
+              <div class="hero-float-title">Antar Tepat Waktu</div>
+              <div class="hero-float-sub">Sebelum jam makan tiba</div>
+            </div>
+          </div>
+          <div class="hero-float-card hero-float-card-2">
+            <div class="hero-float-icon"><i class="bi bi-emoji-smile"></i></div>
+            <div>
+              <div class="hero-float-title">4.9 / 5.0</div>
+              <div class="hero-float-sub">Rating dari pelanggan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KENAPA DAPURKOST
+============================================================ -->
+<section class="why-section" id="tentang">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Kenapa Pilih Kami</span>
+      <h2 class="section-title">Kenapa DapurKost</h2>
+      <p class="section-desc mx-auto">
+        Bukan cuma antar makanan, kami memastikan setiap porsi terasa seperti masakan rumah sendiri.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+          <div class="feature-title">Higienis &amp; Sehat</div>
+          <p class="feature-desc">Diolah dengan bahan segar setiap hari dan proses masak yang terjaga kebersihannya.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-wallet2"></i></div>
+          <div class="feature-title">Harga Mahasiswa</div>
+          <p class="feature-desc">Paket berlangganan dirancang khusus supaya tetap ramah di kantong anak kost.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-truck"></i></div>
+          <div class="feature-title">Antar Tepat Waktu</div>
+          <p class="feature-desc">Makanan sampai sebelum jam makan, jadi kamu nggak perlu menunggu lama.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-cup-hot"></i></div>
+          <div class="feature-title">Menu Variatif</div>
+          <p class="feature-desc">Menu berganti tiap hari supaya kamu nggak bosan makan itu-itu saja.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="counter-strip reveal">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <div class="counter-number"><span class="counter" data-target="1200">0</span>+</div>
+          <div class="counter-label">Pelanggan Aktif</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-number"><span class="counter" data-target="50000">0</span>+</div>
+          <div class="counter-label">Porsi Terkirim</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-number"><span class="counter" data-target="15">0</span></div>
+          <div class="counter-label">Area Kost</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-number"><span class="counter" data-target="98">0</span>%</div>
+          <div class="counter-label">Pelanggan Puas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PILIHAN PAKET
+============================================================ -->
+<section class="pricing-section" id="paket">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Langganan Fleksibel</span>
+      <h2 class="section-title">Pilihan Paket</h2>
+      <p class="section-desc mx-auto">Pilih paket yang paling sesuai dengan kebutuhan dan jadwal makanmu.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="pricing-card">
+          <div class="pricing-name">Paket Hemat</div>
+          <span class="pricing-price">Rp15rb</span>
+          <span class="pricing-period">/ sekali makan</span>
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill"></i> 1x makan per hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Menu harian standar</li>
+            <li><i class="bi bi-check-circle-fill"></i> Gratis antar area kampus</li>
+            <li><i class="bi bi-check-circle-fill"></i> Tanpa kontrak jangka panjang</li>
+          </ul>
+          <a href="#" class="btn btn-pricing btn-ripple">Pilih Paket</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="pricing-card popular">
+          <div class="pricing-badge">Populer</div>
+          <div class="pricing-name">Paket Populer</div>
+          <span class="pricing-price">Rp350rb</span>
+          <span class="pricing-period">/ bulan (2x makan)</span>
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill"></i> 2x makan per hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Pilihan menu lebih banyak</li>
+            <li><i class="bi bi-check-circle-fill"></i> Gratis ongkir semua area</li>
+            <li><i class="bi bi-check-circle-fill"></i> Bisa ganti menu 2x/minggu</li>
+          </ul>
+          <a href="#" class="btn btn-pricing btn-ripple">Pilih Paket</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="pricing-card">
+          <div class="pricing-name">Paket Komplit</div>
+          <span class="pricing-price">Rp550rb</span>
+          <span class="pricing-period">/ bulan (3x makan)</span>
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill"></i> 3x makan per hari</li>
+            <li><i class="bi bi-check-circle-fill"></i> Semua menu dapat dipilih bebas</li>
+            <li><i class="bi bi-check-circle-fill"></i> Prioritas jadwal antar</li>
+            <li><i class="bi bi-check-circle-fill"></i> Konsultasi menu gratis</li>
+          </ul>
+          <a href="#" class="btn btn-pricing btn-ripple">Pilih Paket</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONI
+============================================================ -->
+<section class="testimoni-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Kata Mereka</span>
+      <h2 class="section-title">Testimoni Pelanggan</h2>
+      <p class="section-desc mx-auto">Cerita nyata dari mahasiswa yang sudah berlangganan DapurKost.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 reveal reveal-delay-1">
+        <div class="testimoni-card">
+          <i class="bi bi-quote testimoni-quote-icon"></i>
+          <div class="testimoni-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimoni-text">"Sejak langganan DapurKost, aku jadi nggak pernah telat makan lagi. Rasanya juga enak, mirip masakan ibu di rumah."</p>
+          <div class="testimoni-profile">
+            <div class="testimoni-avatar">R</div>
+            <div>
+              <div class="testimoni-name">Rani Anjani</div>
+              <div class="testimoni-role">Mahasiswa, Kost Dago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 reveal reveal-delay-2">
+        <div class="testimoni-card">
+          <i class="bi bi-quote testimoni-quote-icon"></i>
+          <div class="testimoni-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimoni-text">"Harganya cocok banget buat kantong mahasiswa, tapi porsinya tetap kenyang dan menunya ganti-ganti terus."</p>
+          <div class="testimoni-profile">
+            <div class="testimoni-avatar">F</div>
+            <div>
+              <div class="testimoni-name">Fajar Ramadhan</div>
+              <div class="testimoni-role">Mahasiswa, Kost Sekeloa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 reveal reveal-delay-3">
+        <div class="testimoni-card">
+          <i class="bi bi-quote testimoni-quote-icon"></i>
+          <div class="testimoni-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <p class="testimoni-text">"Pengantarannya selalu tepat waktu, jadi aku bisa atur jadwal kuliah tanpa khawatir soal makan."</p>
+          <div class="testimoni-profile">
+            <div class="testimoni-avatar">S</div>
+            <div>
+              <div class="testimoni-name">Sinta Maharani</div>
+              <div class="testimoni-role">Mahasiswa, Kost Sriwijaya</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ ACCORDION
+============================================================ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Punya Pertanyaan?</span>
+      <h2 class="section-title">FAQ</h2>
+      <p class="section-desc mx-auto">Beberapa pertanyaan yang paling sering ditanyakan pelanggan kami.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion reveal" id="faqAccordion">
+
+          <div class="accordion-item accordion-item-dk">
+            <h2 class="accordion-header">
+              <button class="accordion-button accordion-button-dk" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Bagaimana cara memesan catering di DapurKost?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body accordion-body-dk">
+                Kamu cukup pilih paket berlangganan yang diinginkan, isi data pengiriman, lalu lakukan pembayaran.
+                Setelah itu, tim kami akan mengonfirmasi jadwal pengantaran pertama melalui WhatsApp.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion-item-dk">
+            <h2 class="accordion-header">
+              <button class="accordion-button accordion-button-dk collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Area mana saja yang bisa dijangkau layanan antar?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body accordion-body-dk">
+                Saat ini kami melayani area sekitar kampus dan kost-kostan dalam radius yang telah ditentukan.
+                Silakan cek ketersediaan area pada halaman Cara Order sebelum berlangganan.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion-item-dk">
+            <h2 class="accordion-header">
+              <button class="accordion-button accordion-button-dk collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Metode pembayaran apa saja yang tersedia?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body accordion-body-dk">
+                Kami menerima pembayaran melalui transfer bank, e-wallet, dan QRIS agar prosesnya lebih mudah dan cepat.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion-item-dk">
+            <h2 class="accordion-header">
+              <button class="accordion-button accordion-button-dk collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Apakah bisa request menu sesuai selera?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body accordion-body-dk">
+                Bisa. Untuk paket Komplit, kamu bahkan bisa berkonsultasi langsung dengan tim dapur mengenai preferensi menu mingguan.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item accordion-item-dk">
+            <h2 class="accordion-header">
+              <button class="accordion-button accordion-button-dk collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Apakah ada minimal durasi berlangganan?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body accordion-body-dk">
+                Tidak ada kontrak jangka panjang. Kamu bisa mencoba paket harian terlebih dahulu sebelum memutuskan berlangganan bulanan.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION
+============================================================ -->
+<section id="pesan">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Siap Makan Enak Tanpa Ribet?</h2>
+      <p class="cta-desc">Gabung sekarang dan rasakan kemudahan makan rumahan yang diantar langsung ke kostmu setiap hari.</p>
+      <a href="#" class="btn btn-cta btn-ripple"><i class="bi bi-whatsapp me-2"></i>Mulai Berlangganan Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer-dk">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+          <span>DapurKost</span>
+        </div>
+        <p class="footer-desc">Solusi makan harian untuk mahasiswa dan anak kost. Rasa rumahan, harga bersahabat, antar tepat waktu.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="cara-order.html">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="#paket">Paket Hemat</a></li>
+          <li><a href="#paket">Paket Populer</a></li>
+          <li><a href="#paket">Paket Komplit</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Kontak</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Jl. Sekeloa Dalam No. 12, Bandung</span></div>
+        <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>0812-3456-7890</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>halo@dapurkost.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 DapurKost. Seluruh hak cipta dilindungi.
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/home.js"></script>
+
+</body>
+</html>

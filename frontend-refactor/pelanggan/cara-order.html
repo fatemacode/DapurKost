@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Order - DapurKost</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/cara-order.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dapurkost" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-dk" href="home.html">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list" style="font-size:1.8rem; color: var(--merah);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
+        <li class="nav-item"><a class="nav-link active" href="cara-order.html">Cara Order</a></li>
+      </ul>
+      <a href="menu.html" class="btn btn-navbar-order btn-ripple">Pesan Sekarang</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-cara">
+  <div class="container">
+    <span class="section-eyebrow reveal reveal-left show">Panduan Lengkap</span>
+    <h1 class="hero-cara-title reveal reveal-left show">Cara <span class="highlight">Order di DapurKost</span></h1>
+    <p class="hero-cara-desc reveal reveal-left show mx-auto">
+      Cuma 8 langkah mudah dari pilih menu sampai makanan sampai di depan pintu kostmu. Yuk simak alurnya di bawah ini.
+    </p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="container">
+
+    <div class="timeline-wrap" id="timelineWrap">
+      <div class="timeline-track">
+        <div class="timeline-fill" id="timelineFill"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-basket"></i></div>
+            <div class="timeline-card-title">Pilih Menu</div>
+            <p class="timeline-card-desc">Jelajahi berbagai menu harian mulai dari sarapan sampai dessert sesuai selera.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-basket"></i><span class="timeline-step-number">1</span></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-calendar-week"></i></div>
+            <div class="timeline-card-title">Pilih Paket</div>
+            <p class="timeline-card-desc">Tentukan paket berlangganan: Harian, Mingguan, atau Bulanan sesuai kebutuhanmu.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-calendar-week"></i><span class="timeline-step-number">2</span></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-box-arrow-in-right"></i></div>
+            <div class="timeline-card-title">Login</div>
+            <p class="timeline-card-desc">Masuk ke akunmu atau daftar baru dalam hitungan detik untuk melanjutkan pesanan.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-box-arrow-in-right"></i><span class="timeline-step-number">3</span></div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-cart-check"></i></div>
+            <div class="timeline-card-title">Checkout</div>
+            <p class="timeline-card-desc">Isi alamat kost, tanggal mulai pengiriman, dan periksa kembali ringkasan pesananmu.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-cart-check"></i><span class="timeline-step-number">4</span></div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-credit-card"></i></div>
+            <div class="timeline-card-title">Pembayaran</div>
+            <p class="timeline-card-desc">Pilih metode pembayaran favoritmu dan unggah bukti transfer dengan mudah.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-credit-card"></i><span class="timeline-step-number">5</span></div>
+      </div>
+
+      <!-- STEP 6 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-person-check"></i></div>
+            <div class="timeline-card-title">Admin Konfirmasi</div>
+            <p class="timeline-card-desc">Tim kami memverifikasi pembayaranmu secara cepat, biasanya kurang dari 30 menit.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-person-check"></i><span class="timeline-step-number">6</span></div>
+      </div>
+
+      <!-- STEP 7 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-gear-fill"></i></div>
+            <div class="timeline-card-title">Pesanan Diproses</div>
+            <p class="timeline-card-desc">Dapur kami mulai menyiapkan makananmu dengan bahan segar dan penuh perhatian.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-gear-fill"></i><span class="timeline-step-number">7</span></div>
+      </div>
+
+      <!-- STEP 8 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="timeline-illustration"><i class="bi bi-house-check"></i></div>
+            <div class="timeline-card-title">Pesanan Sampai</div>
+            <p class="timeline-card-desc">Makanan hangat siap dinikmati, diantar langsung ke depan pintu kostmu tepat waktu.</p>
+          </div>
+        </div>
+        <div class="timeline-node"><i class="bi bi-house-check"></i><span class="timeline-step-number">8</span></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-section reveal show">
+      <h2 class="cta-title">Siap Mencoba Kemudahannya?</h2>
+      <p class="cta-desc">Mulai dari langkah pertama sekarang dan rasakan kemudahan makan harian tanpa ribet bersama DapurKost.</p>
+      <a href="menu.html" class="btn btn-cta btn-ripple"><i class="bi bi-basket me-2"></i>Mulai Pesan Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-dk">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+          <span>DapurKost</span>
+        </div>
+        <p class="footer-desc">Solusi makan harian untuk mahasiswa dan anak kost. Rasa rumahan, harga bersahabat, antar tepat waktu.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="cara-order.html">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="paket.html">Paket Harian</a></li>
+          <li><a href="paket.html">Paket Mingguan</a></li>
+          <li><a href="paket.html">Paket Bulanan</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Kontak</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Jl. Sekeloa Dalam No. 12, Bandung</span></div>
+        <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>0812-3456-7890</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>halo@dapurkost.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 DapurKost. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/cara-order.js"></script>
+
+</body>
+</html>

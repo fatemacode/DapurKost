@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paket Berlangganan - DapurKost</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/paket.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-logo">DK</div>
+  <div class="loader-text">DapurKost</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dapurkost" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-dk" href="home.html">
+      <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+      <span>DapurKost</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list" style="font-size:1.8rem; color: var(--merah);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
+        <li class="nav-item"><a class="nav-link" href="cara-order.html">Cara Order</a></li>
+      </ul>
+      <a href="#paket-cards" class="btn btn-navbar-order btn-ripple">Pesan Sekarang</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO PAKET -->
+<section class="hero-paket">
+  <div class="container">
+    <span class="section-eyebrow reveal">Langganan Sesuai Kebutuhan</span>
+    <h1 class="hero-paket-title reveal reveal-delay-1">Pilih <span class="highlight">Paket Berlangganan</span> Kamu</h1>
+    <p class="hero-paket-desc reveal reveal-delay-2 mx-auto">
+      Mau coba harian, hemat mingguan, atau langganan penuh sebulan? DapurKost punya paket yang fleksibel sesuai jadwal dan bujet kamu.
+    </p>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section class="pricing-cards-section" id="paket-cards">
+  <div class="container">
+    <div class="row g-4 justify-content-center" id="pricingCardsRow">
+
+      <!-- PAKET HARIAN -->
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="pricing-card-v2" data-paket="harian">
+          <div class="pricing-card-v2-icon"><i class="bi bi-sun"></i></div>
+          <div class="pricing-card-v2-name">Paket Harian</div>
+          <span class="pricing-card-v2-price">Rp15.000</span>
+          <span class="pricing-card-v2-period">/ 1x makan</span>
+
+          <div class="pricing-info-row"><i class="bi bi-clock"></i><span class="label">Durasi</span><span class="value">1 Hari</span></div>
+          <div class="pricing-info-row"><i class="bi bi-truck"></i><span class="label">Estimasi Antar</span><span class="value">± 45 Menit</span></div>
+          <div class="pricing-info-row"><i class="bi bi-arrow-repeat"></i><span class="label">Menu Berganti</span><span class="value">Setiap Hari</span></div>
+
+          <ul class="pricing-benefit-list">
+            <li><i class="bi bi-check-circle-fill"></i> Cocok untuk coba-coba dulu</li>
+            <li><i class="bi bi-check-circle-fill"></i> Tanpa kontrak jangka panjang</li>
+            <li><i class="bi bi-check-circle-fill"></i> Bisa pesan kapan saja</li>
+          </ul>
+
+          <button class="btn btn-pilih-paket btn-ripple">Pilih Paket</button>
+        </div>
+      </div>
+
+      <!-- PAKET MINGGUAN (POPULER) -->
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="pricing-card-v2 card-populer" data-paket="mingguan">
+          <div class="pricing-badge-tag badge-populer"><i class="bi bi-stars"></i> Paling Populer</div>
+          <div class="pricing-card-v2-icon"><i class="bi bi-calendar-week"></i></div>
+          <div class="pricing-card-v2-name">Paket Mingguan</div>
+          <span class="pricing-card-v2-price">Rp95.000</span>
+          <span class="pricing-card-v2-period">/ 7 hari (2x makan/hari)</span>
+
+          <div class="pricing-info-row"><i class="bi bi-clock"></i><span class="label">Durasi</span><span class="value">7 Hari</span></div>
+          <div class="pricing-info-row"><i class="bi bi-truck"></i><span class="label">Estimasi Antar</span><span class="value">± 30 Menit</span></div>
+          <div class="pricing-info-row"><i class="bi bi-arrow-repeat"></i><span class="label">Menu Berganti</span><span class="value">Setiap Hari</span></div>
+
+          <ul class="pricing-benefit-list">
+            <li><i class="bi bi-check-circle-fill"></i> Gratis ongkir seluruh area kost</li>
+            <li><i class="bi bi-check-circle-fill"></i> Bisa ganti menu 2x dalam seminggu</li>
+            <li><i class="bi bi-check-circle-fill"></i> Prioritas jadwal pengantaran</li>
+          </ul>
+
+          <button class="btn btn-pilih-paket btn-ripple">Pilih Paket</button>
+          <a href="jadwal-menu.html?paket=mingguan" class="btn-lihat-jadwal"><i class="bi bi-calendar2-week"></i> Lihat Jadwal Menu</a>
+        </div>
+      </div>
+
+      <!-- PAKET BULANAN (HEMAT) -->
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="pricing-card-v2" data-paket="bulanan">
+          <div class="pricing-badge-tag badge-hemat"><i class="bi bi-piggy-bank"></i> Paling Hemat</div>
+          <div class="pricing-card-v2-icon"><i class="bi bi-calendar-month"></i></div>
+          <div class="pricing-card-v2-name">Paket Bulanan</div>
+          <span class="pricing-card-v2-price">Rp350.000</span>
+          <span class="pricing-card-v2-period">/ 30 hari (2x makan/hari)</span>
+
+          <div class="pricing-info-row"><i class="bi bi-clock"></i><span class="label">Durasi</span><span class="value">30 Hari</span></div>
+          <div class="pricing-info-row"><i class="bi bi-truck"></i><span class="label">Estimasi Antar</span><span class="value">± 30 Menit</span></div>
+          <div class="pricing-info-row"><i class="bi bi-arrow-repeat"></i><span class="label">Menu Berganti</span><span class="value">Setiap Hari</span></div>
+
+          <ul class="pricing-benefit-list">
+            <li><i class="bi bi-check-circle-fill"></i> Harga per porsi paling murah</li>
+            <li><i class="bi bi-check-circle-fill"></i> Konsultasi menu mingguan gratis</li>
+            <li><i class="bi bi-check-circle-fill"></i> Bebas pilih semua menu tersedia</li>
+          </ul>
+
+          <button class="btn btn-pilih-paket btn-ripple">Pilih Paket</button>
+          <a href="jadwal-menu.html?paket=bulanan" class="btn-lihat-jadwal"><i class="bi bi-calendar2-month"></i> Lihat Jadwal Menu</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="compare-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Bandingkan Detailnya</span>
+      <h2 class="section-title">Tabel Perbandingan Paket</h2>
+      <p class="section-desc mx-auto">Lihat perbedaan lengkap tiap paket sebelum menentukan pilihan.</p>
+    </div>
+
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Fitur</th>
+            <th>Paket Harian</th>
+            <th class="compare-highlight-col">Paket Mingguan</th>
+            <th>Paket Bulanan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Harga</td>
+            <td>Rp15.000 / makan</td>
+            <td class="compare-highlight-col">Rp95.000 / minggu</td>
+            <td>Rp350.000 / bulan</td>
+          </tr>
+          <tr>
+            <td>Durasi</td>
+            <td>1 Hari</td>
+            <td class="compare-highlight-col">7 Hari</td>
+            <td>30 Hari</td>
+          </tr>
+          <tr>
+            <td>Jumlah Makan / Hari</td>
+            <td>1x</td>
+            <td class="compare-highlight-col">2x</td>
+            <td>2x</td>
+          </tr>
+          <tr>
+            <td>Estimasi Pengiriman</td>
+            <td>± 45 Menit</td>
+            <td class="compare-highlight-col">± 30 Menit</td>
+            <td>± 30 Menit</td>
+          </tr>
+          <tr>
+            <td>Menu Berganti Setiap Hari</td>
+            <td><i class="bi bi-check-circle-fill icon-yes"></i></td>
+            <td class="compare-highlight-col"><i class="bi bi-check-circle-fill icon-yes"></i></td>
+            <td><i class="bi bi-check-circle-fill icon-yes"></i></td>
+          </tr>
+          <tr>
+            <td>Gratis Ongkir</td>
+            <td><i class="bi bi-x-circle icon-no"></i></td>
+            <td class="compare-highlight-col"><i class="bi bi-check-circle-fill icon-yes"></i></td>
+            <td><i class="bi bi-check-circle-fill icon-yes"></i></td>
+          </tr>
+          <tr>
+            <td>Konsultasi Menu</td>
+            <td><i class="bi bi-x-circle icon-no"></i></td>
+            <td class="compare-highlight-col"><i class="bi bi-x-circle icon-no"></i></td>
+            <td><i class="bi bi-check-circle-fill icon-yes"></i></td>
+          </tr>
+          <tr>
+            <td>Prioritas Pengiriman</td>
+            <td><i class="bi bi-x-circle icon-no"></i></td>
+            <td class="compare-highlight-col"><i class="bi bi-check-circle-fill icon-yes"></i></td>
+            <td><i class="bi bi-check-circle-fill icon-yes"></i></td>
+          </tr>
+          <tr>
+            <td>Kontrak Jangka Panjang</td>
+            <td>Tidak Ada</td>
+            <td class="compare-highlight-col">Tidak Ada</td>
+            <td>Tidak Ada</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section>
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Belum Yakin Paket Mana yang Cocok?</h2>
+      <p class="cta-desc">Tim kami siap membantu merekomendasikan paket terbaik sesuai kebiasaan makan dan bujet kamu.</p>
+      <a href="cara-order.html" class="btn btn-cta btn-ripple"><i class="bi bi-chat-dots me-2"></i>Konsultasi Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-dk">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dapurkost.png" alt="Logo DapurKost">
+          <span>DapurKost</span>
+        </div>
+        <p class="footer-desc">Solusi makan harian untuk mahasiswa dan anak kost. Rasa rumahan, harga bersahabat, antar tepat waktu.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="cara-order.html">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="paket.html">Paket Harian</a></li>
+          <li><a href="paket.html">Paket Mingguan</a></li>
+          <li><a href="paket.html">Paket Bulanan</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-title">Kontak</div>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Jl. Sekeloa Dalam No. 12, Bandung</span></div>
+        <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>0812-3456-7890</span></div>
+        <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>halo@dapurkost.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 DapurKost. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<div class="toast-dk" id="toastDK">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="toastMessage">Paket berhasil dipilih</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/paket.js"></script>
+
+</body>
+</html>
